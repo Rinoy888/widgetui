@@ -9,7 +9,7 @@
  */
 
 angular.module('BczUiApp')
-    .controller('MilesCtrl', function ($interval, milesService) {
+    .controller('MilesCtrl', function ( milesService,$interval,$http) {
         var vm = this;
 
         vm.openPopup = function () {
@@ -19,6 +19,36 @@ angular.module('BczUiApp')
 
         vm.closePopup = function () {
             vm.popup = false;
+        }
+
+
+          var index = 0;
+        $http.get('data.json').success(function(data) {
+           vm.fueldata = data;
+            vm.setdata(index);
+           console.log(vm.fueldata[index])
+        });
+
+
+        vm.toggleData = function(){
+            if( index < vm.fueldata.length-1){
+                index++;
+            }else{
+                index = 0;
+            }
+            vm.setdata(index);
+        }
+
+        vm.init = function(){
+            $interval(function(){
+                console.log("init wrkng")
+                vm.toggleData();
+            },3000)
+
+        }
+
+        vm.setdata = function(index){
+            vm.currentData = vm.fueldata[index];
         }
 
 
@@ -68,5 +98,6 @@ angular.module('BczUiApp')
             getData();
         },3000)
 
+        vm.init();
 
     })

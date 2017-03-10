@@ -17,15 +17,22 @@ angular.module('BczUiApp')
 
             vm.data = generateData();
             callback(vm.data);
+    
         }
+        // $http.get('../../data.json').success(function(data) {
+    
+        //    vm.content = data;
+        // }); 
+        // console.log(content)
 
+        // $http({
+        //     method : 'GET',
+        //     url : 'data.json'
+        // }).then(function(resp){
+        //     console.log(resp)
+        // })
 
-        $http({
-            method : 'GET',
-            url : 'localhost:8000/api/widget/getwidgets'
-        }).then(function(resp){
-            console.log(resp)
-        })
+       
 
 
         /* Random Data Generator (took from nvd3.org) */
@@ -74,3 +81,8 @@ angular.module('BczUiApp')
 
 
     });
+
+ // $http.get('data.json').success(function(data) {
+ //          vm.fueldata = data;
+ //           console.log(fueldata)
+ //        })

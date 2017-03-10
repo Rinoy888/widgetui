@@ -7,7 +7,7 @@
             <div class="gridBox -bg-green" id="milebox" ng-controller="MilesCtrl as vm">
 
                 <div class="heading" >Miles Covered</div>
-                <div class="g-content" ng-click="vm.openPopup()">75<span> Miles</span></div>
+                <div class="g-content" ng-click="vm.openPopup()">{{vm.currentData.miles}}<span> Miles</span></div>
 
                 <div class="g-popup" ng-if="vm.popup">
                     <div class="pop-back"  ng-click="vm.closePopup()"></div>
@@ -38,7 +38,7 @@
             <div class="gridBox -bg-green2" id="fuelbox" ng-controller="FuelCtrl as vm">
 
                 <div class="heading" >Fuel Consumed</div>
-                <div class="g-content" ng-click="vm.openPopup()">25<span> Ltr</span></div>
+                <div class="g-content" ng-click="vm.openPopup()">{{vm.currentData.fuel}}<span> Ltr</span></div>
 
                 <div class="g-popup" ng-if="vm.popup">
                     <div class="pop-back"  ng-click="vm.closePopup()"></div>
