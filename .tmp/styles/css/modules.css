@@ -1,0 +1,181 @@
+box, .grid, .grid .gridSet, .grid .gridSet .gridOuter, .grid .gridSet .gridOuter .gridBox, .heading, .g-content, .g-popup, .g-popup .pop-back, .g-popup .pop-content, .g-popup .pop-content .pop-head, .g-popup .pop-content .pop-head .pop-head-name, .g-popup .pop-content .pop-head .pop-head-button, .g-popup .pop-content .popc-heading, .g-popup .pop-content .popc-description, .g-popup .pop-content .popc-graph {
+  display: block;
+  float: left;
+  position: relative;
+  /* Chrome/Safari */
+  /* Firefox */
+  -ms-box-sizing: border-box;
+  /* IE10+ */
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.grid {
+  width: 100vw;
+  height: 100vh;
+  padding: 5px;
+  font-family: r-m; }
+  .grid .gridSet {
+    width: 50%;
+    height: 50%; }
+    .grid .gridSet .gridOuter {
+      padding: 5px; }
+      .grid .gridSet .gridOuter .gridBox {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border-radius: 3px; }
+      .grid .gridSet .gridOuter #fuelbox:hover {
+        cursor: pointer;
+        background: #37dd7e;
+        -webkit-transition: 0.5s ease; }
+      .grid .gridSet .gridOuter #milebox:hover {
+        cursor: pointer;
+        background: #1dceab;
+        -webkit-transition: 0.5s ease; }
+    .grid .gridSet .gridOuter.-w-1 {
+      width: 10%; }
+    .grid .gridSet .gridOuter.-w-2 {
+      width: 20%; }
+    .grid .gridSet .gridOuter.-w-3 {
+      width: 30%; }
+    .grid .gridSet .gridOuter.-w-4 {
+      width: 40%; }
+    .grid .gridSet .gridOuter.-w-5 {
+      width: 50%; }
+    .grid .gridSet .gridOuter.-w-6 {
+      width: 60%; }
+    .grid .gridSet .gridOuter.-w-7 {
+      width: 70%; }
+    .grid .gridSet .gridOuter.-w-8 {
+      width: 80%; }
+    .grid .gridSet .gridOuter.-w-9 {
+      width: 90%; }
+    .grid .gridSet .gridOuter.-w-10 {
+      width: 100%; }
+    .grid .gridSet .gridOuter.-h-1 {
+      height: 10%; }
+    .grid .gridSet .gridOuter.-h-2 {
+      height: 20%; }
+    .grid .gridSet .gridOuter.-h-3 {
+      height: 30%; }
+    .grid .gridSet .gridOuter.-h-4 {
+      height: 40%; }
+    .grid .gridSet .gridOuter.-h-5 {
+      height: 50%; }
+    .grid .gridSet .gridOuter.-h-6 {
+      height: 60%; }
+    .grid .gridSet .gridOuter.-h-7 {
+      height: 70%; }
+    .grid .gridSet .gridOuter.-h-8 {
+      height: 80%; }
+    .grid .gridSet .gridOuter.-h-9 {
+      height: 90%; }
+    .grid .gridSet .gridOuter.-h-10 {
+      height: 100%; }
+
+.-bg-green {
+  background: #1abc9c; }
+
+.-bg-green2 {
+  background: #2ecc71; }
+
+.-bg-green2 {
+  background: #2ecc71; }
+
+.-bg-violet {
+  background: #9b59b6; }
+
+.-bg-blue {
+  background: #3498db; }
+
+.-bg-yellow {
+  background: #f1c40f; }
+
+.-bg-orange {
+  background: #e67e22; }
+
+.-bg-red {
+  background: #e74c3c; }
+
+.heading:hover {
+  cursor: pointer; }
+
+.heading {
+  width: 100%;
+  font-size: 14px;
+  font-family: r-m;
+  color: #fff; }
+
+.g-content {
+  width: 100%;
+  height: 100%;
+  font-size: 70px;
+  font-family: r-m;
+  color: #fff;
+  text-align: center;
+  padding-top: 50px; }
+  .g-content span {
+    font-size: 25px; }
+
+.g-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; }
+  .g-popup .pop-back {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); }
+  .g-popup .pop-content {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    bottom: 10%;
+    right: 10%;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    .g-popup .pop-content .pop-head {
+      width: 100%;
+      height: 30px;
+      background: #eee; }
+      .g-popup .pop-content .pop-head .pop-head-name {
+        font-family: r-m;
+        height: 100%;
+        color: #999;
+        font-size: 13px;
+        line-height: 30px;
+        padding-left: 10px; }
+      .g-popup .pop-content .pop-head .pop-head-button:hover {
+        cursor: pointer;
+        background: #e74c3c; }
+      .g-popup .pop-content .pop-head .pop-head-button {
+        font-family: r-m;
+        height: 20px;
+        width: 20px;
+        color: #fff;
+        background: #ff7c68;
+        line-height: 21px;
+        font-size: 10px;
+        float: right;
+        text-align: center;
+        border-radius: 100%;
+        margin: 4px; }
+    .g-popup .pop-content .popc-heading {
+      width: 100%;
+      padding: 40px 10px 10px 20px;
+      font-family: r-l;
+      font-size: 50px; }
+    .g-popup .pop-content .popc-description {
+      width: 70%;
+      padding: 10px 20px;
+      font-size: 13px;
+      line-height: 150%; }
+    .g-popup .pop-content .popc-graph {
+      width: 90%;
+      margin: 0 5%;
+      margin-top: 30px;
+      height: 50%; }

@@ -1,0 +1,81 @@
+<div class="grid">
+    <div class="gridSet">
+
+        <!--miles widget-->
+
+        <div class="gridOuter -w-5 -h-6">
+            <div class="gridBox -bg-green" id="milebox" ng-controller="MilesCtrl as vm">
+
+                <div class="heading" >Miles Covered</div>
+                <div class="g-content" ng-click="vm.openPopup()">75<span> Miles</span></div>
+
+                <div class="g-popup" ng-if="vm.popup">
+                    <div class="pop-back"  ng-click="vm.closePopup()"></div>
+                    <div class="pop-content">
+                        <div class="pop-head">
+                            <div class="pop-head-name">Miles Covered</div>
+                            <div class="pop-head-button" ng-click="vm.closePopup()"><i class="fa fa-times"></i></div>
+                        </div>
+
+                        <div class="popc-heading">Total Miles Covered</div>
+                        <div class="popc-description">The below graphs show you the total miles covered by the vehicle,
+                            This description is just for filling the content. The main intention of writing this paragraphs
+                            is to fill this space up. please enjoy the awesome graph!
+                        </div>
+
+                        <div class="popc-graph">
+                            <nvd3 options="vm.options" data="vm.data"></nvd3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--fuel widget-->
+
+        <div class="gridOuter -w-5 -h-6">
+            <div class="gridBox -bg-green2" id="fuelbox" ng-controller="FuelCtrl as vm">
+
+                <div class="heading" >Fuel Consumed</div>
+                <div class="g-content" ng-click="vm.openPopup()">25<span> Ltr</span></div>
+
+                <div class="g-popup" ng-if="vm.popup">
+                    <div class="pop-back"  ng-click="vm.closePopup()"></div>
+                    <div class="pop-content">
+                        <div class="pop-head">
+                            <div class="pop-head-name">Fuel Consumed</div>
+                            <div class="pop-head-button" ng-click="vm.closePopup()"><i class="fa fa-times"></i></div>
+                        </div>
+
+                        <div class="popc-heading">Total Fuel Consumed</div>
+                        <div class="popc-description">The below graphs show you the total miles covered by the vehicle,
+                            This description is just for filling the content. The main intention of writing this paragraphs
+                            is to fill this space up. please enjoy the awesome graph!
+                        </div>
+
+                        <div class="popc-graph">
+                            <nvd3 options="vm.options" data="vm.data"></nvd3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--demo grids-->
+
+        <div class="gridOuter -w-3 -h-4">
+            <div class="gridBox -bg-red"></div>
+        </div>
+        <div class="gridOuter -w-4 -h-4">
+            <div class="gridBox -bg-yellow"></div>
+        </div>
+        <div class="gridOuter -w-3 -h-4">
+            <div class="gridBox -bg-orange"></div>
+        </div>
+    </div>
+
+    <!--demo grids-->
+
+</div>
