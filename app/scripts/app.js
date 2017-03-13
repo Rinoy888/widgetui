@@ -41,5 +41,7 @@ angular
     })
     .run(function($rootScope, $location, $state, $stateParams, $cookieStore) {
 
-    });
+    })
+
+    .constant("HOST","http://localhost:1234")
 

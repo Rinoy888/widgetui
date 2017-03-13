@@ -21,37 +21,12 @@ angular.module('BczUiApp')
             vm.popup = false;
         }
 
-
-          var index = 0;
-        $http.get('data.json').success(function(data) {
-           vm.fueldata = data;
-            vm.setdata(index);
-           console.log(vm.fueldata[index])
-        });
-
-
-        vm.toggleData = function(){
-            if( index < vm.fueldata.length-1){
-                index++;
-            }else{
-                index = 0;
-            }
-            vm.setdata(index);
+        vm.init = function(){        
+            $interval(function () {
+                getData();
+            },1000)
+            getData();
         }
-
-        vm.init = function(){
-            $interval(function(){
-                console.log("init wrkng")
-                vm.toggleData();
-            },3000)
-
-        }
-
-        vm.setdata = function(index){
-            vm.currentData = vm.fueldata[index];
-        }
-
-
 
         vm.options = {
             chart: {
@@ -68,7 +43,7 @@ angular.module('BczUiApp')
                 duration: 500,
                 stacked: true,
                 xAxis: {
-                    axisLabel: 'Distance (miles)',
+                    axisLabel: 'Time (days)',
                     showMaxMin: false,
                     tickFormat: function(d){
                         return d3.format(',f')(d);
@@ -87,17 +62,13 @@ angular.module('BczUiApp')
 
 
         function getData() {
-            if(vm.popup){
-                milesService.getData(function (data) {
-                    vm.data = data;
-                })
-            }
+            milesService.getData(function (data) {
+                vm.data = data;
+            })
+            milesService.getTotalData(function (data) {
+                vm.currentData = data;
+            })
         }
 
-        $interval(function () {
-            getData();
-        },3000)
-
         vm.init();
-
     })
