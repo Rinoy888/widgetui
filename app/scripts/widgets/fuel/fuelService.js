@@ -75,17 +75,28 @@ angular.module('BczUiApp')
                 var lastDay = data.x;
                 $interval(function(){
                     var tempObject = {
-                        time : moment(lastDay).days(counter).unix() * 1000,
+                        time :  convertTime(data,lastDay,counter),
                         fuel : getRandom(1, 10),
                         miles : getRandom(1, 100),
+
                     }
                     $http.post(HOST + '/api/widget/createwidget', tempObject)
                         .success(function(data) {
 
                         });
                         counter++;
+                        // console.log(tempObject)
                 },1000)
             }
+        }
+
+        function convertTime(data,lastDay,counter){
+            var time = moment(lastDay).days(counter).unix();
+
+            var date = new Date(time * 1000);
+            var datevalues = ('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + date.getFullYear();
+            console.log(datevalues)
+            return datevalues;
         }
 
         function getRandom(min, max){

@@ -43,7 +43,7 @@ angular.module('BczUiApp')
                 duration: 500,
                 stacked: true,
                 xAxis: {
-                    axisLabel: 'Time (days)',
+                    axisLabel: 'Time(days)',
                     showMaxMin: false,
                     tickFormat: function(d){
                         return d3.format(',f')(d);
